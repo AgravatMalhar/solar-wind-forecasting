@@ -1,16 +1,33 @@
 import streamlit as st
-
 import matplotlib.pyplot as plt
+
+# Matplotlib theme
 plt.style.use("seaborn-v0_8-darkgrid")
-def divider():
-    st.markdown("<hr style='border: 1px solid #333;'>", unsafe_allow_html=True)
 
-
+# -----------------------------------
+# GLOBAL PAGE SETTINGS (EDITED HERE)
+# -----------------------------------
 st.set_page_config(
-    page_title="Solar & Wind Forecasting",
+    page_title="GridSight – Solar & Wind Forecasting",
+    page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# -----------------------------------
+# HIDE THE DEFAULT ROOT PAGE ("app")
+# -----------------------------------
+st.markdown("""
+    <style>
+        section[data-testid="stSidebar"] .css-1oe5cao {
+            display: none !important;
+        }
+        section[data-testid="stSidebar"] .css-1oe5cao.e1fqkh3o4 {
+            display: none !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 
 # Global CSS
 st.markdown("""
@@ -109,7 +126,7 @@ st.set_page_config(page_title="Renewable Forecasting Prototype",
 
 st.sidebar.success("Select a page from the left.")
 
-st.title("⚡ Renewable Generation Forecasting – Prototype")
+st.title("Renewable Generation Forecasting – Prototype")
 
 st.markdown("""
 Welcome to the multi-page forecasting dashboard.
