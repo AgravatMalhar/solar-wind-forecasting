@@ -7,18 +7,25 @@ st.set_page_config(
     layout="wide"
 )
 
-# 🔥 THIS sets how Streamlit shows the page name in the sidebar
+# --- CLEAN SIDEBAR LABEL FIX ---
 st.markdown("""
-    <style>
-        [data-testid="stSidebarNav"] ul:first-of-type li:first-child a {
-            font-size: 0px !important;
-        }
-        [data-testid="stSidebarNav"] ul:first-of-type li:first-child a:after {
-            content: "Home";   /* ←← CHANGE THIS NAME */
-            font-size: 16px !important;
-            color: white !important;
-        }
-    </style>
+<style>
+
+    /* hide the original label "app" fully */
+    [data-testid="stSidebarNav"] ul:first-of-type li:first-child a p {
+        display: none !important;
+    }
+
+    /* replace it with custom text */
+    [data-testid="stSidebarNav"] ul:first-of-type li:first-child a::after {
+        content: "Home";
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        padding-left: 2px;
+    }
+
+</style>
 """, unsafe_allow_html=True)
 # Page config
 st.set_page_config(
