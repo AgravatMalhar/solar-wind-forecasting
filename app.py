@@ -1,6 +1,27 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
+# Page config
+st.set_page_config(
+    page_title="GridSight",
+    page_icon="⚡",
+    layout="wide",
+)
+
+# Hide default Streamlit header
+st.markdown("<style>header {visibility: hidden;}</style>", unsafe_allow_html=True)
+
+# Sidebar title
+with st.sidebar:
+    st.markdown("""
+        <div style='padding: 15px 5px;'>
+            <h2 style='color:#fff; margin-bottom:0;'>GridSight</h2>
+            <p style='color:#888; font-size:14px; margin-top:2px;'>
+                Smart Renewable Forecasting Suite
+            </p>
+            <hr style='border: 1px solid #333; margin: 15px 0;'>
+        </div>
+    """, unsafe_allow_html=True)
 # Matplotlib theme
 plt.style.use("seaborn-v0_8-darkgrid")
 
