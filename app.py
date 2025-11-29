@@ -1,6 +1,25 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
+st.set_page_config(
+    page_title="GridSight",
+    page_icon="⚡",
+    layout="wide"
+)
+
+# 🔥 THIS sets how Streamlit shows the page name in the sidebar
+st.markdown("""
+    <style>
+        [data-testid="stSidebarNav"] ul:first-of-type li:first-child a {
+            font-size: 0px !important;
+        }
+        [data-testid="stSidebarNav"] ul:first-of-type li:first-child a:after {
+            content: "Home";   /* ←← CHANGE THIS NAME */
+            font-size: 16px !important;
+            color: white !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
 # Page config
 st.set_page_config(
     page_title="GridSight",
