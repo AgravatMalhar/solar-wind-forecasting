@@ -18,7 +18,7 @@ st.markdown("""
 
     /* replace it with custom text */
     [data-testid="stSidebarNav"] ul:first-of-type li:first-child a::after {
-        content: "Home";
+        content: "";
         font-size: 16px;
         font-weight: 600;
         color: white;
